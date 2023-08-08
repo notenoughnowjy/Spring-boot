@@ -1,0 +1,17 @@
+{{>layouts/header}}
+
+<form class="container" action="/articles/create" method="post">
+    <div class="mb-3">
+        <label class="form-label">제목</label>
+<!--        input 타입의 name에 dto 디렉터리의 변수명과 같은 변수명을 name에 넣어줘야 한다.-->
+        <input type="text" class="form-control" name="title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">내용</label>
+        <!--        textarea 타입의 name에 dto 디렉터리의 변수명과 같은 변수명을 name에 넣어줘야 한다.-->
+        <textarea class="form-control" rows="3" name="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{>layouts/footer}}
