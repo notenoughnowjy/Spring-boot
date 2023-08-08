@@ -1,10 +1,8 @@
-<!--mustache는 html을 다르게 부른다라고 일단 이해하기-->
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-<h1>Hello I'm {{username}}</h1>
-</body>
-</html>
+{{>layouts/header}}
+
+<!--content-->
+<div class="bg-dark text-white p-5">
+    <h1>{{username}}님, 반갑습니다.</h1>
+</div></h1>
+
+{{>/layouts/footer}}
