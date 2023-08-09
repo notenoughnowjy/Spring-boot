@@ -1,5 +1,6 @@
 package com.example.firstproject.controller;
 
+import com.example.firstproject.entity.Arricle;
 import dto.ArticleForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,11 @@ public class article_controller {
     @PostMapping("/articles/create")
     public String createArticles(ArticleForm form){
         System.out.println(form.toString());
+
+//        1. Dto를 변환 -> Entity!
+        Arricle article = form.toEntity();
+//        2. Repository에게 Entity를 DB안에 저장
+
         return "";
     }
 }
